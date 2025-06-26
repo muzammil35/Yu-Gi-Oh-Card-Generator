@@ -1,0 +1,10 @@
+*.png
+*.jpg
+*.jpeg
+*.pt
+miscellaneous/
+fine_tuning_scripts/
+fine_tuned_models/
+yugioh-image/
+
+

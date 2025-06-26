@@ -1,0 +1,262 @@
+body {
+    background-color: #000000;
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffff;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+h1 {
+    text-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff;
+    font-weight: 700; 
+    letter-spacing: 2px;
+}
+
+.cardTitle {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    color: #000000;
+    position: absolute;
+    left: 52px;
+    top: 56px;
+}
+
+.card-container {
+    perspective: 1000px;
+    margin: 15px;
+    width: 600px;
+    height: 876px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.card-container:hover {
+    transform: translateY(-10px);
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+
+
+.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+
+}
+
+.card-front {
+    background-image: url('https://vignette.wikia.nocookie.net/yugioh/images/9/95/SlifertheSkyDragon-GBI-AE-Back.png/revision/latest/scale-to-width-down/328?cb=2010072608370');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-front::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0,255,255,0.2) 0%, rgba(255,0,255,0.2) 100%);
+    border-radius: 10px;
+    opacity: 0.3;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    overflow: hidden;
+    padding: 10px;
+    background-image: url('/static/images/Yugioh Card Maker.jpeg');;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.card-image {
+    width: 442px;
+    height: 443px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(1px, 78px); /* (right, down) */
+    margin: 100px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+
+.card-name {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+    color: #000;
+    background: linear-gradient(to right, #d4af37, #f9f295, #d4af37);
+    -webkit-background-clip: text;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-atk {
+    color: #000;
+    font-family: 'Bebas Neue', sans-serif;
+    position: absolute;
+    left: 380px;
+    top: 805px;
+    font-size: 16px;
+    max-width: 335px;
+}
+
+.card-def {
+    color: #000;
+    font-family: 'Bebas Neue', sans-serif;
+    position: absolute;
+    left: 495px;
+    top: 805px;
+    font-size: 16px;
+    max-width: 335px;
+}
+
+
+
+.spell .card-name, .trap .card-name {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0,0,0,0.8);
+}
+
+.card-stars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.star {
+    color: gold;
+    margin: 0 2px;
+    text-shadow: 0 0 5px rgba(255,215,0,0.8);
+}
+
+.card-stats {
+    font-size: 11px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: 600;
+    color: #c92525;
+}
+
+.spell .card-stats, .trap .card-stats {
+    color: #fff;
+}
+
+
+.card-description {
+    font-size: 15px;
+    text-align: justify;
+    text-align-last: left;
+    height: 60px;
+    line-height: 1.1;
+    overflow-y: auto;
+    padding: 1px;
+    color: #000000;
+    margin-top: 152px;
+    margin-left: 46px;
+    margin-inline-end: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+    word-spacing: -1px; 
+}
+
+
+
+.pack-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.loader {
+    border: 5px solid #333;
+    border-top: 5px solid #00ffff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+    display: none;
+    box-shadow: 0 0 15px #00ffff;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    border: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    box-shadow: 0 0 10px rgba(0,255,255,0.7);
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,255,255,1);
+}
+
+.form-control {
+    background-color: #111;
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.form-control:focus {
+    background-color: #222;
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px rgba(255,0,255,0.5);
+    color: #00ffff;
+}
+
+/* Custom Scrollbar */
+.card-description::-webkit-scrollbar {
+    width: 5px;
+}
+
+.card-description::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.card-description::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Animation for new cards */
+@keyframes cardAppear {
+    0% { transform: scale(0.1) rotate(20deg); opacity: 0; }
+    100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+.card-container {
+    animation: cardAppear 0.5s ease-out forwards;
+}
+  
