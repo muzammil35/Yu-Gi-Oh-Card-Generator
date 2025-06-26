@@ -1,0 +1,8 @@
+*.png
+*.jpg
+*.jpeg
+*.pt
+miscellaneous/
+
+fine_tuned_models/
+
