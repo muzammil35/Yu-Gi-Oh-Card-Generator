@@ -2,7 +2,7 @@
 
 A full-stack AI-powered web application that generates complete Yu-Gi-Oh dragon monster cards with original artwork, descriptions, and stats. This project combines fine-tuned machine learning models with a FastAPI backend and web interface to create an interactive card generation experience.
 
-## 🎯 Project Overview
+##  Project Overview
 
 This comprehensive system generates authentic Yu-Gi-Oh dragon cards through:
 - **Image Generation**: Fine-tuned Stable Diffusion XL model deployed on Hugging Face Spaces
@@ -10,7 +10,7 @@ This comprehensive system generates authentic Yu-Gi-Oh dragon cards through:
 - **Web Application**: FastAPI backend with HTML frontend for interactive card generation
 - **Statistical Modeling**: Truncated normal distribution for realistic ATK/DEF stat generation
 
-## 🛠 Technical Architecture
+##  Technical Architecture
 
 ### Backend Stack
 - **FastAPI**: High-performance Python web framework
@@ -30,7 +30,7 @@ This comprehensive system generates authentic Yu-Gi-Oh dragon cards through:
 - **Image Processing**: PIL-based WebP to PNG conversion pipeline
 - **RESTful API**: Clean API endpoints for card generation
 
-## 🚀 Key Features
+##  Key Features
 
 ### Core Functionality
 - **Interactive Web Interface**: User-friendly card generation portal
@@ -44,7 +44,7 @@ This comprehensive system generates authentic Yu-Gi-Oh dragon cards through:
 - **Error Handling**: Robust exception management and fallback mechanisms
 - **File Management**: Automated image storage and serving system
 
-## 📊 Model Specifications
+##  Model Specifications
 
 ### Stable Diffusion XL Fine-tuning Parameters
 ```bash
@@ -108,7 +108,7 @@ class Card(BaseModel):
     image_path: str
 ```
 
-## 🎨 Generation Process
+##  Generation Process
 
 ### Image Generation
 - **Hugging Face Space**: `marshad/yugioh-image`
@@ -129,7 +129,7 @@ class Card(BaseModel):
 - **Real-time Processing**: Efficient image generation and serving pipeline
 - **Robust Architecture**: Comprehensive error handling and file management
 
-## 📚 Dependencies
+##  Dependencies
 
 ### Core Framework
 - FastAPI, Uvicorn, Pydantic
@@ -144,7 +144,7 @@ class Card(BaseModel):
 - PIL (Python Imaging Library)
 - WebP/PNG conversion pipeline
 
-## 🚀 Usage
+##  Usage
 
 ### Local Development
 ```bash
@@ -160,14 +160,14 @@ curl "http://localhost:8000/api/generate-dragon?dragon_name=Ancient%20Fire%20Dra
 ### Web Interface
 Navigate to the root URL for the interactive card generation interface.
 
-## 📈 Performance Features
+##  Performance Features
 
 - **Asynchronous Processing**: Non-blocking image generation
 - **Efficient File Handling**: Optimized image storage and serving
 - **Error Recovery**: Graceful handling of generation failures
 - **Resource Management**: Automatic cleanup and file organization
 
-## 📝 Future Enhancements
+##  Future Enhancements
 
 - **Database Integration**: Persistent card storage and retrieval
 - **User Authentication**: Personal card collections
